@@ -1,0 +1,289 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif; /* Menggunakan font modern yang bold, ganti jika tidak ada */
+    margin: 0;
+    line-height: 1.7; /* Sedikit lebih renggang untuk keterbacaan */
+    color: #2c3e50; /* Warna teks lebih gelap dan tegas */
+    background-color: #ecf0f1; /* Latar belakang abu-abu terang */
+}
+
+/* Mengimpor Google Font Montserrat (Tambahkan ini di paling atas file CSS Anda) */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap'); */
+/* Pastikan Anda menambahkan baris di atas di awal file CSS Anda, atau mengimpornya di <head> HTML */
+
+
+.container {
+    width: 85%; /* Sedikit lebih lebar */
+    margin: auto;
+    overflow: hidden;
+    padding: 25px 0; /* Padding lebih besar */
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Font yang sama untuk konsistensi */
+    color: #2980b9; /* Warna biru yang lebih berani */
+    text-transform: uppercase; /* Membuat judul lebih menonjol */
+    font-weight: 859; /* Lebih tebal */
+    letter-spacing: 1px; /* Spasi antar huruf */
+}
+
+h1 {
+    font-size: 2.8em; /* Ukuran h1 lebih besar */
+}
+
+h2 {
+    font-size: 2.2em; /* Ukuran h2 lebih besar */
+    margin-bottom: 25px; /* Jarak bawah */
+}
+
+h3 {
+    font-size: 1.5em; /* Ukuran h3 lebih besar */
+}
+
+a {
+    color: #3498db; /* Biru terang untuk link */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transisi halus */
+}
+
+a:hover {
+    color: #2980b9; /* Biru lebih gelap saat hover */
+}
+
+.button {
+    display: inline-block;
+    background: #e74c3c; /* Merah menyala untuk tombol */
+    color: #fff;
+    padding: 12px 25px; /* Padding lebih besar */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; /* Sudut lebih membulat */
+    transition: background 0.3s ease, transform 0.2s ease; /* Transisi untuk hover dan klik */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.button:hover {
+    background: #c0392b; /* Merah lebih gelap saat hover */
+    transform: translateY(-2px); /* Efek sedikit terangkat */
+}
+
+/* Header */
+.header {
+    background: #2c3e50; /* Biru gelap keabu-abuan yang kuat */
+    color: #fff;
+    padding: 1.2rem 0; /* Padding lebih besar */
+    border-bottom: 5px solid #e74c3c; /* Garis bawah merah mencolok */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih jelas */
+}
+
+.header h1 {
+    color: #fff;
+    float: left;
+    margin: 0;
+    font-size: 2.5em; /* Judul header lebih besar */
+}
+
+.header nav {
+    float: right;
+    margin-top: 5px; /* Sedikit ke bawah agar sejajar */
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header li {
+    display: inline;
+    padding: 0 20px; /* Jarak antar menu lebih besar */
+}
+
+.header a {
+    color: #fff;
+    font-weight: 700; /* Tebal */
+    text-transform: uppercase;
+    position: relative; /* Untuk efek underline */
+    padding-bottom: 5px;
+}
+
+.header a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #3498db; /* Warna underline saat hover */
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.header a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/pharmacy-background.jpg') no-repeat center center/cover; /* Gradient overlay lebih gelap */
+    color: #fff;
+    text-align: center;
+    padding: 120px 0; /* Padding lebih besar */
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efek bayangan teks */
+}
+
+.hero-section h2 {
+    font-size: 3.8em; /* Ukuran judul hero lebih besar */
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.hero-section p {
+    font-size: 1.5em; /* Ukuran paragraf hero lebih besar */
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sections */
+section {
+    padding: 60px 0; /* Padding lebih besar untuk setiap section */
+    background-color: #fff;
+    margin-bottom: 25px; /* Jarak antar section */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Bayangan lebih dalam */
+    border-radius: 10px; /* Sudut lebih membulat */
+    text-align: center;
+    overflow: hidden; /* Pastikan konten tidak keluar */
+}
+
+.about-section, .services-section, .products-section, .contact-section {
+    /* text-align: left; */ /* Anda bisa mengaturnya ke kiri jika ingin, tapi saya biarkan tengah */
+}
+
+.service-grid, .product-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Jarak antar item lebih besar */
+    margin-top: 40px;
+}
+
+.service-item, .product-item {
+    flex-basis: 28%; /* Sedikit lebih kecil untuk memberi ruang */
+    background: #ecf0f1; /* Latar belakang item abu-abu terang */
+    padding: 30px; /* Padding lebih besar */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Bayangan item */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover, .product-item:hover {
+    transform: translateY(-8px); /* Efek melayang saat hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Bayangan lebih kuat saat hover */
+}
+
+.product-item img {
+    width: 120px; /* Gambar sedikit lebih besar */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid #3498db; /* Border biru yang mencolok */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bayangan pada gambar */
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 650px; /* Form lebih lebar */
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Jarak antar input */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px; /* Padding input lebih besar */
+    border: 1px solid #bdc3c7; /* Border abu-abu netral */
+    border-radius: 8px;
+    font-size: 1.1em; /* Ukuran font input lebih besar */
+    background-color: #fcfcfc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px; /* Tinggi minimum textarea */
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50; /* Warna gelap yang sama dengan header */
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 30px;
+    border-top: 5px solid #3498db; /* Garis atas biru yang mencolok */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header h1,
+    .header nav {
+        float: none;
+        text-align: center;
+    }
+
+    .header nav ul {
+        margin-top: 15px;
+    }
+
+    .header li {
+        display: block;
+        padding: 8px 0;
+    }
+
+    .hero-section h2 {
+        font-size: 3em;
+    }
+
+    .hero-section p {
+        font-size: 1.3em;
+    }
+
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.3em; }
+
+    .service-item, .product-item {
+        flex-basis: 90%; /* Menumpuk pada layar kecil */
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h2 {
+        font-size: 2.5em;
+    }
+    .hero-section p {
+        font-size: 1.1em;
+    }
+    .button {
+        padding: 10px 20px;
+    }
+}
