@@ -23,7 +23,7 @@ h1, h2, h3 {
     font-family: 'Montserrat', sans-serif; /* Font yang sama untuk konsistensi */
     color: #2980b9; /* Warna biru yang lebih berani */
     text-transform: uppercase; /* Membuat judul lebih menonjol */
-    font-weight: 859; /* Lebih tebal */
+    font-weight: 800; /* Lebih tebal */
     letter-spacing: 1px; /* Spasi antar huruf */
 }
 
